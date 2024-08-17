@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useRef} from 'react'
-import clock_icon from "../assets/clock.svg";
 
 const Stopwatch = () => {
     const [isRunning, setIsRunning] = useState(false);
@@ -32,12 +31,12 @@ const Stopwatch = () => {
         setIsRunning(false)
     }
     const formatTime = () =>{
-        let hours = Math.floor(timeUsed / (1000 *60*60));
+        // let hours = Math.floor(timeUsed / (1000 *60*60));
         let mins = Math.floor(timeUsed / (1000 * 60) % 60);
         let secs = Math.floor(timeUsed / (1000) % 60);
         let millisecs = Math.floor((timeUsed % 1000) / 10)
         
-        hours = String(hours).padStart(2, "0")
+        // hours = String(hours).padStart(2, "0")
         mins = String(mins).padStart(2, "0")
         secs = String(secs).padStart(2, "0")
         millisecs = String(millisecs).padStart(2, "0")
